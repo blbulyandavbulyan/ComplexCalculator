@@ -1,5 +1,7 @@
 package org.blbulyandavbulyan.complexcalc
 
+import org.blbulyandavbulyan.complexcalc.exceptions.WrongComplexNumber
+
 class ComplexNumberParser {
     fun parse(value: String): ComplexNumber {
         //считаем что у нас число записано в виде A + Bi или A - Bi
@@ -8,13 +10,13 @@ class ComplexNumberParser {
         val patternForParsing = Regex(regexForParsing)
         if (patternForParsing.matches(value)) {
             //строка верного формата
-            val mathResult = patternForParsing.find(value, 0) ?: throw RuntimeException("OOOps")
+            val mathResult = patternForParsing.find(value, 0) ?: throw WrongComplexNumber()
             val groupValues = mathResult.groupValues
             val real = groupValues[1].toDouble()//действительная часть у нас написана первой
             var imaginary = groupValues[3].toDouble()//мнимая часть самая последняя
             if(groupValues[2] == "-") imaginary*=-1
             return ComplexNumber(real, imaginary)
         }
-        else throw RuntimeException("you entered wrong complex number")
+        else throw WrongComplexNumber()
     }
 }
