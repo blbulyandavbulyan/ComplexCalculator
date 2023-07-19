@@ -4,11 +4,11 @@ import kotlin.math.abs
 import kotlin.math.pow
 
 /**
- * Предоставляет класс для работы с комплексными числами
+ * Предоставляет класс для представления комплексного числа
  * @property real действительная часть комплексного числа
  * @property imaginary мнимая часть комплексного числа
  */
-class ComplexNumber(private val real: Double, private val imaginary: Double) {
+data class ComplexNumber(private val real: Double, private val imaginary: Double) {
     operator fun plus(other: ComplexNumber): ComplexNumber =
         ComplexNumber(this.real + other.real, this.imaginary + other.imaginary)
 
