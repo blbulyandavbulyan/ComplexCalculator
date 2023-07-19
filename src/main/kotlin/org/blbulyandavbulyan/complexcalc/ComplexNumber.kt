@@ -1,5 +1,6 @@
 package org.blbulyandavbulyan.complexcalc
 
+import kotlin.math.abs
 import kotlin.math.pow
 
 /**
@@ -27,4 +28,12 @@ class ComplexNumber(private val real: Double, private val imaginary: Double) {
         val d = other.imaginary
         return ComplexNumber((a * c + b * d) / (c.pow(2) + d.pow(2)), (b * c - a * d) / (c.pow(2) + d.pow(2)))
     }
+
+    override fun toString(): String {
+        //логика такая, если мнимая часть положительная то будет real+imaginary
+        //если мнимая часть отрицательная, то будет real-imaginary
+        //если она 0, то будет просто real
+        return if (imaginary > 0) "$real+${imaginary}i" else if (imaginary < 0) "$real-${abs(imaginary)}i" else real.toString()
+    }
+
 }
