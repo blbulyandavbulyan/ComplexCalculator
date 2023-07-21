@@ -1,4 +1,4 @@
-package org.blbulyandavbulyan.complexcalc
+package org.blbulyandavbulyan.complexcalc.calc
 
 enum class Operation {
     ADD,

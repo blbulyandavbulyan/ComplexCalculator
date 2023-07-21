@@ -1,7 +1,5 @@
 package org.blbulyandavbulyan.complexcalc.calc
 
-import org.blbulyandavbulyan.complexcalc.Operation
-import org.blbulyandavbulyan.complexcalc.calc.exceptions.CalculatorException
 import org.blbulyandavbulyan.complexcalc.calc.exceptions.WrongExpressionException
 import org.blbulyandavbulyan.complexcalc.complex.ComplexNumber
 import org.blbulyandavbulyan.complexcalc.complex.exceptions.WrongComplexNumber
