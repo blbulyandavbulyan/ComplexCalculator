@@ -1,4 +1,4 @@
-package org.blbulyandavbulyan.complexcalc
+package org.blbulyandavbulyan.complexcalc.complex
 
 import kotlin.math.abs
 import kotlin.math.pow

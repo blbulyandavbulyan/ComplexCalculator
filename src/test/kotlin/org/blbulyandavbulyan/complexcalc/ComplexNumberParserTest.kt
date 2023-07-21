@@ -1,6 +1,7 @@
 package org.blbulyandavbulyan.complexcalc
 
-import org.blbulyandavbulyan.complexcalc.exceptions.WrongComplexNumber
+import org.blbulyandavbulyan.complexcalc.complex.ComplexNumber
+import org.blbulyandavbulyan.complexcalc.complex.exceptions.WrongComplexNumber
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.BeforeEach
