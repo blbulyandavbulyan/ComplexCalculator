@@ -9,6 +9,9 @@ import java.util.logging.Level
  * Данный класс добавляет логирование к калькулятору, он очень похож на паттерн "декоратор", а возможно это он и есть
  */
 class CalculatorWithLogging : Calculator() {
+    /**
+     * Логгер, которым будет пользоваться данный класс
+     */
     val logger: Logger = Logger.getLogger(this.javaClass.name)
     override fun calculate(a: ComplexNumber, b: ComplexNumber, operation: Operation): ComplexNumber {
         try {
