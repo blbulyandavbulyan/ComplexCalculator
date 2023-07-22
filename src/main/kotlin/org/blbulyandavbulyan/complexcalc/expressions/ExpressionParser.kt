@@ -28,9 +28,6 @@ class ExpressionParser {
             val operation = Operation.valueOf(groupValues[2])
             return Expression(a, b, operation)
         }
-        catch (e: IllegalArgumentException){
-            throw WrongExpressionException("You gave a wrong expression, operation is invalid!", e)
-        }
         catch (e: WrongComplexNumber){
             throw WrongExpressionException("You gave a wrong expression, wrong complex number!", e)
         }
