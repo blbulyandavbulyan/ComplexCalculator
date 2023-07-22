@@ -1,10 +1,6 @@
 package org.blbulyandavbulyan.complexcalc.calc
 
-import org.blbulyandavbulyan.complexcalc.calc.exceptions.WrongExpressionException
 import org.blbulyandavbulyan.complexcalc.complex.ComplexNumber
-import org.blbulyandavbulyan.complexcalc.complex.exceptions.WrongComplexNumber
-import org.blbulyandavbulyan.complexcalc.complex.toComplex
-import java.lang.IllegalArgumentException
 
 /**
  * Данный класс предоставляет калькулятор комплексных чисел
