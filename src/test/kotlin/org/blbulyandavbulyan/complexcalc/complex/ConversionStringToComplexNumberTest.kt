@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
 class ConversionStringToComplexNumberTest {
-    @BeforeEach
     @Test
     fun `test parse with correct data`(){
         assertEquals(ComplexNumber(2.0,2.0),"2 + 2i".toComplex())
