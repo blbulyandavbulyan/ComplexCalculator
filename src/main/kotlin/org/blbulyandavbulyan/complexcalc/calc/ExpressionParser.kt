@@ -17,7 +17,7 @@ class ExpressionParser(private val calculator: Calculator) {
      */
     fun parse(expression: String): ComplexNumber {
         //здесь, первая группа в регулярном выражении - первый операнд
-        //вторая группа оператор(оно же прописано в enum Operation
+        //вторая группа оператор(оно же прописано в enum Operation)
         //третья группа - второй операнд
 
         val regex = Regex("(.*) (${Operation.entries.joinToString(separator = "|")}) (.*)")
