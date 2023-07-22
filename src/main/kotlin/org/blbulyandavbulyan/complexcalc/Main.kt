@@ -2,6 +2,8 @@ package org.blbulyandavbulyan.complexcalc
 
 import org.blbulyandavbulyan.complexcalc.calc.Calculator
 import org.blbulyandavbulyan.complexcalc.calc.ExpressionParser
+import org.blbulyandavbulyan.complexcalc.calc.exceptions.WrongExpressionException
+import org.blbulyandavbulyan.complexcalc.complex.exceptions.WrongComplexNumber
 import java.util.Scanner
 
 fun main() {
@@ -16,7 +18,8 @@ fun main() {
             println(result)
         }
         catch (e: RuntimeException){
-            println(e.message)
+            if(e is WrongComplexNumber || e is WrongExpressionException) println(e.message)
+            else throw e
         }
     }
 }
