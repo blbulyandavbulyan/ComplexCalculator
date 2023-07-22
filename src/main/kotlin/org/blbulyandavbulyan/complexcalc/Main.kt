@@ -9,6 +9,13 @@ import org.blbulyandavbulyan.complexcalc.complex.exceptions.WrongComplexNumber
 import org.blbulyandavbulyan.complexcalc.expressions.Expression
 import java.util.Scanner
 import java.util.logging.FileHandler
+
+/**
+ * @param expression выражение, которое нужно вычислить
+ * @receiver калькулятор, который будет производить вычисление
+ * @return комплексное число, которое получилось в результате вычисления выражения
+ * @see Calculator.calculate(ComplexNumber, ComplexNumber, Operation)
+ */
 private fun Calculator.calculate(expression: Expression): ComplexNumber = this.calculate(expression.operand1, expression.operand2, expression.operation)
 fun main() {
     val sc = Scanner(System.`in`)
