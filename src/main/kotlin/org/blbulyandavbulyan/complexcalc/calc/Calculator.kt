@@ -13,7 +13,7 @@ open class Calculator {
      * @param operation бинарная операция, которую необходимо выполнить над операндами
      * @return комплексное число в результате операции
      */
-    fun calculate(a: ComplexNumber, b: ComplexNumber, operation: Operation): ComplexNumber {
+    open fun calculate(a: ComplexNumber, b: ComplexNumber, operation: Operation): ComplexNumber {
         return when (operation) {
             Operation.ADD -> a + b
             Operation.SUB -> a - b
