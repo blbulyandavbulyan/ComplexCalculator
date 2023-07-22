@@ -13,6 +13,14 @@ class CalculatorWithLogging : Calculator() {
      * Логгер, которым будет пользоваться данный класс
      */
     val logger: Logger = Logger.getLogger(this.javaClass.name)
+
+    /**
+     * Делает тоже что и родительский метод, но только логгирует все действия и исключения
+     * @param a первый операнд
+     * @param b второй операнд
+     * @param operation бинарная операция
+     * @return вычисленное значение
+     */
     override fun calculate(a: ComplexNumber, b: ComplexNumber, operation: Operation): ComplexNumber {
         try {
             val result = super.calculate(a, b, operation)
